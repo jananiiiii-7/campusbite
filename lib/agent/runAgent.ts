@@ -1,7 +1,7 @@
 import "server-only";
 import type { Content, Part } from "@google/genai";
 import { getGemini } from "../gemini";
-import { GEMINI_MODEL } from "../env";
+import { GOOGLE_GEMINI_MODEL as GEMINI_MODEL } from "../env";
 import type { ChatMessage } from "../schemas";
 import { tools } from "./tools";
 import { toFunctionDeclarations } from "./defineTool";
@@ -93,3 +93,4 @@ async function runTool(name: string, rawArgs: unknown): Promise<AgentStep> {
     return { tool: name, args: parsed.data, ok: false, writes: tool.writes, error: message };
   }
 }
+
