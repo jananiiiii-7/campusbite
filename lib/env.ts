@@ -14,4 +14,5 @@ export function requireEnv(name: string): string {
   return value.trim();
 }
 
-export const GEMINI_MODEL = process.env.GEMINI_MODEL?.trim() || "gemini-3.8-flash";
+export const GOOGLE_GEMINI_MODEL = process.env.GOOGLE_GEMINI_MODEL?.trim() || "gemini-3.8-flash";
+
